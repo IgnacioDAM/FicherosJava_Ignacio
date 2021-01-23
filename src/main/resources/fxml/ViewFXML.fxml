@@ -3,14 +3,15 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
 
-<GridPane fx:id="view" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane fx:id="view" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
   <columnConstraints>
     <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="60.0" />
       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
@@ -23,11 +24,6 @@
     <RowConstraints minHeight="10.0" prefHeight="100.0" />
   </rowConstraints>
    <children>
-      <ListView fx:id="listDatos" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="5">
-         <GridPane.margin>
-            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-         </GridPane.margin>
-      </ListView>
       <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
          <children>
             <Label text="Visualizar el fichero">
@@ -124,5 +120,19 @@
             <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
          </GridPane.margin>
       </VBox>
+      <TableView fx:id="tableEquipo" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="2">
+        <columns>
+          <TableColumn fx:id="colNomEquipo" prefWidth="75.0" text="NomEquipo" />
+          <TableColumn fx:id="colCopas" prefWidth="75.0" text="Copas Ganadas" />
+            <TableColumn fx:id="colCodLiga" prefWidth="75.0" text="CodLiga" />
+        </columns>
+      </TableView>
+      <TableView fx:id="tableContrato" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.columnSpan="2">
+        <columns>
+          <TableColumn fx:id="colFutbolista" prefWidth="75.0" text="Futbolista" />
+          <TableColumn fx:id="colFechaInicio" prefWidth="75.0" text="FechaInicio" />
+            <TableColumn fx:id="colFechaFin" prefWidth="75.0" text="FechaFin" />
+        </columns>
+      </TableView>
    </children>
 </GridPane>

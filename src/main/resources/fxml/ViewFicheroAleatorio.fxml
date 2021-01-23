@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<GridPane fx:id="view" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1">
+  <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" prefHeight="30.0" />
+    <RowConstraints minHeight="10.0" prefHeight="30.0" />
+  </rowConstraints>
+   <children>
+      <Button fx:id="btnInsertar" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#onClickInsertar" text="Insertar" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.rowSpan="2">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </Button>
+      <Button fx:id="btnVisualizar" maxHeight="1.7976931348623157E308" mnemonicParsing="false" onAction="#onClickVisualizar" text="Visualizar" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.rowSpan="2">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </Button>
+      <TextField fx:id="txtIDVisualizar" promptText="Id" GridPane.columnIndex="2" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </TextField>
+      <Button fx:id="btnVisualizarID" mnemonicParsing="false" onAction="#onClickVisualizar" text="Visualizar" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+      <TextField fx:id="txtIDModificar" promptText="Id" GridPane.columnIndex="3" GridPane.rowIndex="2">
+         <GridPane.margin>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </GridPane.margin>
+      </TextField>
+      <TableView fx:id="datosTable" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="4" GridPane.rowSpan="2">
+        <columns>
+          <TableColumn fx:id="colCodEquipo" prefWidth="75.0" text="CodEquipo" />
+          <TableColumn fx:id="colNomEquipo" prefWidth="100.0" text="Nombre Equipo" />
+            <TableColumn fx:id="colCodLiga" prefWidth="75.0" text="CodLiga" />
+            <TableColumn fx:id="colLocalidad" prefWidth="150.0" text="Localidad" />
+            <TableColumn fx:id="colCopas" prefWidth="100.0" text="Copas Ganadas" />
+            <TableColumn fx:id="colInternacional" prefWidth="100.0" text="Internacional" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnModificar" mnemonicParsing="false" onAction="#onClickModificar" text="Modificar" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </Button>
+   </children>
+</GridPane>

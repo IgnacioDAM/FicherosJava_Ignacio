@@ -15,6 +15,7 @@ public class MainController implements Initializable {
 	//controllers
 	private AccesoFicherosController accesoFicheros = new AccesoFicherosController();
 	private XMLController xml = new XMLController();
+	private FicheroAleatorioController aleatorio = new FicheroAleatorioController();
 	
 	// view
 	@FXML
@@ -39,6 +40,7 @@ public class MainController implements Initializable {
 	public void initialize(URL location, ResourceBundle resources) {
 		tabAccesoFicheros.setContent(accesoFicheros.getView());
 		tabFicherosXML.setContent(xml.getView());
+		tabFicherosAleatorios.setContent(aleatorio.getView());
 	}
 	
 	public BorderPane getView() {

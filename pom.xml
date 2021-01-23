@@ -11,7 +11,7 @@
 	<properties>
 		<maven.compiler.target>14</maven.compiler.target>
 		<maven.compiler.source>14</maven.compiler.source>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>	
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<exec.mainClass>aed.ficheros.Main</exec.mainClass>
 	</properties>
 
@@ -25,6 +25,11 @@
 			<groupId>org.openjfx</groupId>
 			<artifactId>javafx-fxml</artifactId>
 			<version>14.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jdom</groupId>
+			<artifactId>jdom2</artifactId>
+			<version>2.0.6</version>
 		</dependency>
 	</dependencies>
 
