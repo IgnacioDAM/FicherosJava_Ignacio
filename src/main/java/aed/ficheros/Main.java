@@ -1,9 +1,9 @@
-package dad.template.javafx;
+package aed.ficheros;
 
 public class Main {
 
 	public static void main(String[] args) {
-		TemplateApp.main(args);
+		App.main(args);
 	}
 
 }
